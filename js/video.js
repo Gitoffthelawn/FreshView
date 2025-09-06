@@ -80,13 +80,17 @@ class Video {
     // Fetches the title of this Video.
     fetchTitle() {
         // Find the title tag associated with this Video.
-        const title = this.element.querySelector(":scope #video-title[title]");
+        const selectors = [
+            ":scope #video-title[title]",
+            ":scope a.yt-lockup-view-model__title"
+        ]
+        const title = this.element.querySelector(selectors.join(','));
         if (title === null) {
             Logger.warning("Video.fetchTitle(): failed to find title element for Video", this.element, ".");
             return undefined;
         }
 
-        this.title = title.getAttribute("title");
+        this.title = title.getAttribute("title") || title.textContent.trim();
         return this.title;
     }
 
