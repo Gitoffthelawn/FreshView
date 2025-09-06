@@ -4,3 +4,4 @@ private/*
 jsconfig.json
 .vscode/
 *.zip
+dist/
