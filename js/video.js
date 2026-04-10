@@ -19,8 +19,7 @@ class Video {
         // List of selectors that could match hyperlink tags associated with this Video.
         const selectors = [
             ":scope a#video-title.yt-simple-endpoint.style-scope.ytd-grid-video-renderer",  // Grid
-            ":scope a.yt-lockup-metadata-view-model__title",                                // Home
-            ":scope a#video-title-link.yt-simple-endpoint.style-scope.ytd-rich-grid-media", // Home (old, possibly not needed)
+            ":scope a.ytLockupMetadataViewModelTitle",                                      // Home
             ":scope a.yt-simple-endpoint.style-scope.ytd-playlist-video-renderer",          // Playlist page
             ":scope a.yt-simple-endpoint.style-scope.ytd-playlist-panel-video-renderer",    // Playlist panel
             ":scope a.yt-lockup-metadata-view-model-wiz__title",                            // Recommendations
