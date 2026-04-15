@@ -18,8 +18,9 @@ class Video {
     deriveURL() {
         // List of selectors that could match hyperlink tags associated with this Video.
         const selectors = [
-            ":scope a#video-title.yt-simple-endpoint.style-scope.ytd-grid-video-renderer",  // Grid
-            ":scope a.ytLockupMetadataViewModelTitle",                                      // Home
+            ":scope a#video-title.yt-simple-endpoint.style-scope.ytd-grid-video-renderer",  // Home tab of Channel page
+            ":scope a#video-title-link.yt-simple-endpoint.style-scope",                     // Videos tab of Channel page
+            ":scope a.ytLockupMetadataViewModelTitle",                                      // Home page
             ":scope a.yt-simple-endpoint.style-scope.ytd-playlist-video-renderer",          // Playlist page
             ":scope a.yt-simple-endpoint.style-scope.ytd-playlist-panel-video-renderer",    // Playlist panel
             ":scope a.yt-lockup-metadata-view-model-wiz__title",                            // Recommendations
